@@ -1,0 +1,32 @@
+g_weight = 41.5
+d_weight = 41.5
+g_price = ""
+d_price = ""
+
+flat_charge = 20.00
+premium_ground_shipping = 125.00
+
+#Ground Shipping
+if g_weight <= 2: 
+  g_price = 1.50 + flat_charge
+elif g_weight > 2 and g_weight <= 6:
+  g_price = 3.00 * g_weight + flat_charge
+elif g_weight > 6 and g_weight <= 10:
+  g_price = 4.00 * g_weight + flat_charge
+else:
+  g_price = 4.75 * g_weight + flat_charge
+
+print("Premium Ground Shipping Cost:" + " " + str(premium_ground_shipping))
+print("Ground Shipping Costs:" + " " + str(g_price))
+
+#Drone Shipping
+if d_weight <= 2:
+  d_price = 4.50 * d_weight
+elif d_weight > 2 and d_weight <= 6:
+  d_price = 9.00 * d_weight
+elif d_weight > 6 and d_weight <= 10:
+  d_price = 12.00 * d_weight
+else:
+    d_price = 14.25 * d_weight 
+
+print("Drone Shipping Costs:" + " " + str(d_price))
